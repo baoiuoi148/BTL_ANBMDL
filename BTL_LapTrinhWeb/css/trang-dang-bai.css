@@ -1,0 +1,77 @@
+:root{
+    --text: #1f2e45;
+}body{
+  font-family: Segoe UI;
+  background: linear-gradient(180deg, #eaf4ff 0%, #f8fbff 100%);
+}
+.admin-page {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.news-form{
+    background:#fff;
+    border:1px solid #d2dce8;
+    border-radius:12px;
+    padding:20px;
+}
+
+.editor-title{
+    margin-bottom:20px;
+}
+
+.editor-title input{
+    width:100%;
+    padding:14px;
+    border:1px solid #d2dce8;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+}
+
+.editor-title input:focus{
+    border-color:var(--primary);
+}
+
+.ck-editor{
+    width:100%;
+}
+
+.ck-editor__editable{
+    min-height:400px;
+}
+.form-actions{
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+}
+.form-actions button{
+  padding:10px 20px;
+  border: none;
+  border-radius:8px;
+  font-size: 14px;
+}
+.submit{
+    background: #0a5ba7;
+    color: white;
+}
+
+.delete{
+    background: #dc3545;
+    color: white;
+}
+
+.draft{
+    background: #6c757d;
+    color: white;
+}
+
+.form-actions button:hover{
+    opacity: 0.9;
+}
+
+h1{
+    font-size: 50px;
+}

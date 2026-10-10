@@ -1,0 +1,104 @@
+:root{
+    --text: #1f2e45;
+}body{
+  font-family: Segoe UI;
+  background: linear-gradient(180deg, #eaf4ff 0%, #f8fbff 100%);
+}
+.admin-page {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+.admin-add{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+.admin-add a{   
+    text-decoration: none;
+    background: #271f97;
+    border-radius:8px;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+.news-form{
+    background:#fff;
+    border:1px solid #d2dce8;
+    border-radius:12px;
+    padding:20px;
+}
+
+.editor-title{
+    margin-bottom:20px;
+    display:block;
+}
+
+.editor-title input{
+    width:100%;
+    padding:14px;
+    border:1px solid #d2dce8;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+}
+
+.editor-title input:focus{
+    border-color:var(--primary);
+}
+
+.ck-editor{
+    width:100%;
+}
+
+.ck-editor__editable{
+    min-height:400px;
+}
+.form-actions{
+  display:flex;
+ justify-content: flex-end;
+  gap:10px;
+  margin-top:20px;
+}
+.form-actions button{
+  padding:8px 15px;
+  border: none;
+  border-radius:8px;
+  font-size: 14px;
+  object-position: right;
+}
+.submit{
+    background: #0a5ba7;
+    color: white;
+}
+
+.reset{
+    background: #dc3545;
+    color: white;
+ 
+}
+
+.update{
+    background: #28a745;
+    color: white;
+
+}
+.new{
+    background: #cbc545;
+    color: white;
+}
+
+
+.form-actions button:hover{
+    opacity: 0.9;
+}
+h1{
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .admin-page__header h1{
+        font-size: 26px;
+    }
+}

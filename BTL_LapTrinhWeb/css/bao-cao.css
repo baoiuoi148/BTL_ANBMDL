@@ -1,0 +1,113 @@
+.search {
+	display: flex;
+}
+
+	.search > img {
+		align-self: center;
+		width: 35px;
+		height: 30px;
+		padding-left: 5px;
+		display: block;
+	}
+
+.search-bar {
+	display: flex;
+	align-items: center;
+}
+
+	.search-bar input {
+		width: 250px;
+		height: 40px;
+	}
+body{
+    background: linear-gradient(180deg, #eaf4ff 0%, #f8fbff 100%);
+}
+.nav-path{
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    padding: 15px 0px;
+}
+.nav-path a{
+    text-decoration: none;
+    color: #0A5BA7; 
+}
+.content-bao-cao {
+	max-width: 980px;
+	margin: 32px auto;
+	padding: 0 16px;
+}
+
+.page-title {
+	font-size: 28px;
+	margin-bottom: 18px;
+}
+
+.report-summary {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 20px;
+}
+
+.card {
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	padding: 16px;
+	border-radius: 6px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.card h3 {
+	margin: 0 0 8px 0;
+	font-size: 14px;
+	color: #444;
+}
+
+.big-number {
+	font-size: 32px;
+	font-weight: 700;
+	margin: 0;
+	color: #1a73e8;
+}
+
+.report-table table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #fff;
+}
+
+.report-table th,
+.report-table td {
+	text-align: left;
+	padding: 10px 12px;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.report-table thead th {
+	background: #fafafa;
+	font-weight: 600;
+}
+
+.report-table tbody tr:hover {
+	background: #fafcff;
+}
+
+.report-table td.count {
+	font-weight: 600;
+	color: #333;
+}
+
+@media (max-width: 640px) {
+	.report-summary {
+		flex-direction: column;
+	}
+
+	.big-number {
+		font-size: 26px;
+	}
+}
+
