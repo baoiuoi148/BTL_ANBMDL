@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,7 +19,18 @@ namespace BTL_LapTrinhWeb
             menuDangNhap.Visible = !daDangNhap;
             menuDangKy.Visible = !daDangNhap;
             menuDangXuat.Visible = daDangNhap;
-            if (Session["username"]!=null && Session["username"].ToString()=="admin")
+            if (daDangNhap)
+            {
+                menuUserGreeting.Visible = true;
+                string roleText = Session["role"] != null ? " (" + Session["role"] + ")" : "";
+                tenHienThi.InnerText = (Session["username"] != null ? Session["username"].ToString() : "") + roleText;
+            }
+            else
+            {
+                menuUserGreeting.Visible = false;
+            }
+
+            if (Session["username"] != null && Session["username"].ToString() == "admin")
             {
                 menuQuanTri.Visible = true;
                 menuDangBai.Visible = true;

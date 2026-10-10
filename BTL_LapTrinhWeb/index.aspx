@@ -35,6 +35,9 @@
         </div>
         <div class="menu">
           <ul class="menu--main">
+            <li id="menuUserGreeting" runat="server" style="background:#0b3c5d; border-radius:4px; padding:2px 8px;">
+              <span style="color:#ffc107; font-size:13px; font-weight:bold;">👤 <span id="tenHienThi" runat="server"></span></span>
+            </li>
             <li><a href="pages/thong_tin_tai_khoan.aspx">THÔNG TIN TÀI KHOẢN</a></li>
             <li id="menuDangNhap" runat="server"><a href="pages/dang-nhap.aspx">ĐĂNG NHẬP</a></li>
             <li id="menuDangKy" runat="server"><a href="pages/dang-ky.aspx">ĐĂNG KÝ</a></li>
