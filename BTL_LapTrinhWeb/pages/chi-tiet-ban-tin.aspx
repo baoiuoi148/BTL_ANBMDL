@@ -94,28 +94,29 @@
       </div>
 
       <div class="comment">
-        <p>Bình luận</p>
-        <input
-          type="text"
-          placeholder="Viết bình luận của bạn?"
-          id="comment"
-        /><br />
+        <p>Bình luận bài viết</p>
+        <div id="thongbao_bl" runat="server"></div>
+        <div style="margin-bottom:10px;">
+          <input
+            type="text"
+            name="ten_bl"
+            placeholder="Tên của bạn hoặc MSSV..."
+            style="width:100%; padding:8px; border:1px solid #ccc; border-radius:4px; margin-bottom:8px;"
+            value='<%= Session["username"] != null ? Session["username"].ToString() : "" %>'
+          />
+          <input
+            type="text"
+            placeholder="Viết bình luận của bạn?"
+            name="noidung_bl"
+            id="comment"
+            style="width:100%;"
+          />
+        </div>
         <div class="container--comment">
-          <input type="submit" id="submit" />
+          <button type="submit" name="btnAction" value="binhluan" id="submit" style="cursor:pointer; background:#0b3c5d; color:#fff; border:none; padding:8px 16px; border-radius:4px;">Gửi bình luận</button>
         </div>
-        <div class="comment--user container--comment">
-          <div class="comment--user__content">
-            <img src="../assest/images/icon_user_comment.png" alt="anh" />
-            <div class="comment--user__name">
-              <p>24A1001D0048</p>
-              <p id="comment_user">Bài viết thật sự rất hữu ích</p>
-            </div>
-          </div>
-          <div class="comment--user__reply">
-            <img src="../assest/icon/rep_comment.png" alt="icon" />
-            <p>Trả lời</p>
-          </div>
-        </div>
+
+        <div id="danh_sach_bl" runat="server" style="margin-top:20px;"></div>
       </div>
 
     </main>

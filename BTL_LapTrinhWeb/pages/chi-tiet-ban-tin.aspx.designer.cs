@@ -122,5 +122,15 @@ namespace BTL_LapTrinhWeb.pages
         /// sidebar_news control.
         /// </summary>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl sidebar_news;
+
+        /// <summary>
+        /// thongbao_bl control.
+        /// </summary>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl thongbao_bl;
+
+        /// <summary>
+        /// danh_sach_bl control.
+        /// </summary>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl danh_sach_bl;
     }
 }

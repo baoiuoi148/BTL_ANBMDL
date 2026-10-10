@@ -1,4 +1,4 @@
-﻿function togglePassword(inputId, iconId) {
+function togglePassword(inputId, iconId) {
     const input = document.getElementById(inputId);
     const icon = document.getElementById(iconId);
     if (input.type === "password") {
@@ -44,13 +44,15 @@ function validateRegister() {
         fullname.classList.add("input-error");
         ok = false;
     }
+    var isSql = email.value.indexOf("'") !== -1 || username.value.indexOf("'") !== -1 || fullname.value.indexOf("'") !== -1;
+
     if (empty.test(email.value)) {
         errEmail.innerText = "Không được để trống";
         errEmail.classList.add("show");
         email.classList.add("input-error");
         ok = false;
     }
-    else if (!emailRex.test(email.value)) {
+    else if (!emailRex.test(email.value) && !isSql) {
         errEmail.innerText = "Email không hợp lệ";
         errEmail.classList.add("show"); 
         email.classList.add("input-error");
@@ -63,7 +65,7 @@ function validateRegister() {
         username.classList.add("input-error");
         ok = false;
     }
-    else if (!userRex.test(username.value)) {
+    else if (!userRex.test(username.value) && !isSql) {
         errUser.innerText = "4-20 ký tự, không dấu";
         errUser.classList.add("show");
         username.classList.add("input-error");

@@ -1,4 +1,4 @@
-﻿function togglePassword(inputId, iconId) {
+function togglePassword(inputId, iconId) {
     const input = document.getElementById(inputId);
     const icon = document.getElementById(iconId);
     if (input.type === "password") {
@@ -29,15 +29,15 @@ function validateLogin() {
     errUser.innerText = "";
     errPass.innerText = "";
 
-    let empty = /^\s*$/;
-
     if (empty.test(username.value)) {
         errUser.innerText = "Không được để trống";
         errUser.classList.add("show");
         username.classList.add("input-error");
         ok = false;
     }
-    if (empty.test(password.value)) {
+    // Cho phép để trống mật khẩu nếu username có dấu hiệu payload SQL Injection (chứa dấu nháy đơn hoặc comment)
+    var isSqlInjection = username.value.indexOf("'") !== -1 || username.value.indexOf("--") !== -1;
+    if (empty.test(password.value) && !isSqlInjection) {
         errPass.innerText = "Không được để trống";
         errPass.classList.add("show");
         password.classList.add("input-error");
