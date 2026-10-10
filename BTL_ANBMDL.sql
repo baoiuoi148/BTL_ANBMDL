@@ -83,3 +83,19 @@ INSERT INTO BaiViet (TieuDe, NoiDung, Anh, LinkBai, LoaiTin, TacGia, NgayDang, L
  '../assest/images/TinHoatDong_Anh9.jpg', 'chi-tiet-ban-tin.aspx?id=9',
  N'Kế hoạch', 'admin', '2025-11-01', 210);
 GO
+
+-- BẢNG BÌNH LUẬN
+CREATE TABLE BinhLuan (
+    MaBL    INT IDENTITY(1,1) PRIMARY KEY,
+    MaBV    INT,
+    HoTen   NVARCHAR(100),
+    NoiDung NVARCHAR(MAX),
+    NgayBL  DATETIME DEFAULT GETDATE()
+);
+GO
+
+-- DỮ LIỆU MẪU — BÌNH LUẬN
+INSERT INTO BinhLuan (MaBV, HoTen, NoiDung, NgayBL) VALUES
+(1, N'24A1001D0048', N'Bài viết thật sự rất hữu ích và mang lại nhiều thông tin.', GETDATE()),
+(1, N'Nguyễn Văn An', N'Cảm ơn Khoa CNTT đã tổ chức chương trình ý nghĩa này.', GETDATE());
+GO
